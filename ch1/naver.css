@@ -1,0 +1,21 @@
+#header-center {
+    margin: 0 auto;
+    width: 1080px;
+}
+
+/* 바로 밑 선택자 */
+#header-search>h1 {
+    width: 280px;
+}
+
+/* 아래는 자손태그 선택자, 위랑 같은 h1을 잡는다 */
+/* #header-center h1 {
+} */
+
+#header-search fieldset {
+    width: 520px;
+}
+
+#header-search h2 {
+    display: none;
+}
