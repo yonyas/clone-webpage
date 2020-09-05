@@ -1,0 +1,78 @@
+* {
+    box-sizing: border-box;
+
+}
+
+.blind {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+}
+
+#header-center {
+    margin: 0 auto;
+    width: 1080px;
+}
+
+/* 바로 밑 선택자 */
+#header-search h1 {
+    width: 199px;
+    height: 50px;
+    /* background-position: -127px -348px; */
+    display: inline-block;
+    background-image: url(./sp_search.png);
+    text-indent: 100%;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    /* background: ulr(./sp_logo.png) -127px -348px no-repeat; */
+    vertical-align: middle;
+
+}
+
+/* 아래는 자손태그 선택자, 위랑 같은 h1을 잡는다 */
+/* #header-center h1 {
+} */
+
+#header-search fieldset {
+    width: 520px;
+    height: 49px;
+    display: inline-block;
+    margin-left: 20px;
+    padding: 12px 0 12px 10px;
+    border: 2px solid #03cf5d;
+    vertical-align: middle;
+    position: relative;
+}
+
+#header-search fieldset input {
+    border: none;
+    padding: 0;
+    outline: none;
+    /* vertical-align: top; */
+}
+
+#header-search fieldset button {
+    width: 49px;
+    height: 49px;
+    border: none;
+    padding: 0;
+    background: #03cf5d;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+#search-image {
+    background: url(./sp_search.png);
+    background-position: 10px 50px;
+    background-repeat: no-repeat;
+    width: 21px;
+    height: 21px;
+    display: inline-block;
+    /* position: absolute; */
+    right: 0;
+    top: 0;
+}
