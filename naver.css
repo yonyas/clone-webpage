@@ -3,6 +3,12 @@
 
 }
 
+html,
+body {
+    margin: 0;
+    paddin: 0;
+}
+
 .blind {
     position: absolute;
     clip: rect(0 0 0 0);
@@ -12,24 +18,61 @@
     overflow: hidden;
 }
 
-#header-center {
+.center-align {
     margin: 0 auto;
     width: 1080px;
 }
 
-/* 바로 밑 선택자 */
+#header-top {
+    float: right;
+    overflow: hidden;
+    /* clear: both;  여기에 지정하면 안먹고 다른 형제태그에 지정해야함*/
+}
+
+#header-top span:first-child {
+    color: #888;
+    letter-spacing: -1px;
+    font-size: 11px;
+    line-height: 22px;
+}
+
+#header-top .happybin {
+    color: #888;
+    letter-spacing: -1px;
+    font-size: 11px;
+    line-height: 22px;
+}
+
+header .center-align #header-top .jrnaver {
+    display: inline-block;
+    width: 123px;
+    height: 22px;
+    background-position: -666px -534px;
+    background-repeat: no-repeat;
+    background-image: url(./sp_logo.png);
+    vertical-align: top;
+    margin: 3px;
+    transform: scale(.5);
+}
+
+#header-search {
+    clear: both;
+}
+
 #header-search h1 {
     width: 199px;
     height: 50px;
-    /* background-position: -127px -348px; */
+    background-position: -1px 0px;
     display: inline-block;
     background-image: url(./sp_search.png);
     text-indent: 100%;
     overflow: hidden;
     background-repeat: no-repeat;
-    /* background: ulr(./sp_logo.png) -127px -348px no-repeat; */
+    /* background: url(./sp_logo.png) -127px -348px no-repeat; */
     vertical-align: middle;
-
+    position: relative;
+    top: -9px;
+    right: -6px;
 }
 
 /* 아래는 자손태그 선택자, 위랑 같은 h1을 잡는다 */
@@ -52,6 +95,8 @@
     padding: 0;
     outline: none;
     /* vertical-align: top; */
+    width: 405px;
+    height: 23px;
 }
 
 #header-search fieldset button {
@@ -61,13 +106,13 @@
     padding: 0;
     background: #03cf5d;
     position: absolute;
-    right: 0;
-    top: 0;
+    right: -2px;
+    top: -2px;
 }
 
 #search-image {
     background: url(./sp_search.png);
-    background-position: 10px 50px;
+    background-position: -3px -60px;
     background-repeat: no-repeat;
     width: 21px;
     height: 21px;
@@ -75,4 +120,65 @@
     /* position: absolute; */
     right: 0;
     top: 0;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav li {
+    display: inline-block;
+}
+
+nav li span:first-child {
+    height: 16px;
+    display: inline-block;
+    /* 스팬이니까 인라인블록으로 바꿔야 보임 */
+    margin-left: 14px;
+
+}
+
+nav li:first-child span:first-child {
+    background: url(./sp_nav.png) 4px -284px no-repeat;
+    width: 36px;
+    margin-left: 0;
+
+}
+
+nav li:nth-child(2) span:first-child {
+    background: url(./sp_nav.png) -279px -52px no-repeat;
+    width: 36px;
+
+}
+
+nav li:nth-child(3) span:first-child {
+    background: url(./sp_nav.png) -100px -182px no-repeat;
+    width: 41px;
+
+}
+
+nav li:nth-child(4) span:first-child {
+    background: url(./sp_nav.png) -101px -156px no-repeat;
+    width: 40px;
+
+}
+
+nav li:nth-child(5) span:first-child {
+    background: url(./sp_nav.png) -279px -156px no-repeat;
+    width: 36px;
+
+}
+
+nav li:nth-child(6) span:first-child {
+    background: url(./sp_nav.png) -70px -284px no-repeat;
+    width: 35px;
+
+}
+
+nav li:nth-child(7) span:first-child {
+    background: url(./sp_nav.png) 4px -284px no-repeat;
+    width: 36px;
+
 }
