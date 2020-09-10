@@ -6,7 +6,8 @@
 html,
 body {
     margin: 0;
-    paddin: 0;
+    padding: 0;
+    font-family: "Malgun Gothic", "맑은 고딕", helvetica, "Apple SD Gothic Neo", sans-serif;
 }
 
 .blind {
@@ -23,17 +24,40 @@ body {
     width: 1080px;
 }
 
+header {
+    height: 170px;
+    margin: 0 auto;
+}
+
 #header-top {
     float: right;
     overflow: hidden;
     /* clear: both;  여기에 지정하면 안먹고 다른 형제태그에 지정해야함*/
+    height: 30px;
 }
 
-#header-top span:first-child {
+#header-top .set_home_btn {
     color: #888;
     letter-spacing: -1px;
     font-size: 11px;
     line-height: 22px;
+}
+
+#header-top .set_home_btn::after {
+    display: inline-block;
+    width: 46px;
+    height: 44px;
+    background-position: -766px -430px;
+    background-repeat: no-repeat;
+    background-image: url(./sp_logo.png);
+    vertical-align: top;
+    margin: 3px;
+    content: '';
+    transform: scale(.4);
+    position: relative;
+    top: -10px;
+    left: -14px;
+
 }
 
 #header-top .happybin {
@@ -48,6 +72,18 @@ header .center-align #header-top .jrnaver {
     width: 123px;
     height: 22px;
     background-position: -666px -534px;
+    background-repeat: no-repeat;
+    background-image: url(./sp_logo.png);
+    vertical-align: top;
+    margin: 3px;
+    transform: scale(.5);
+}
+
+header .center-align #header-top .happybin {
+    display: inline-block;
+    width: 72px;
+    height: 22px;
+    background-position: -514px -616px;
     background-repeat: no-repeat;
     background-image: url(./sp_logo.png);
     vertical-align: top;
@@ -71,8 +107,9 @@ header .center-align #header-top .jrnaver {
     /* background: url(./sp_logo.png) -127px -348px no-repeat; */
     vertical-align: middle;
     position: relative;
-    top: -9px;
+    top: -5px;
     right: -6px;
+    left: 1px;
 }
 
 /* 아래는 자손태그 선택자, 위랑 같은 h1을 잡는다 */
@@ -95,7 +132,7 @@ header .center-align #header-top .jrnaver {
     padding: 0;
     outline: none;
     /* vertical-align: top; */
-    width: 405px;
+    width: 384px;
     height: 23px;
 }
 
@@ -110,6 +147,35 @@ header .center-align #header-top .jrnaver {
     top: -2px;
 }
 
+#search-keyboard {
+    transform: scale(.5);
+    background-image: url(https://s.pstatic.net/static/www/img/uit/2020/sp_main_b46ce0.png);
+    background-repeat: no-repeat;
+    background-position: -838px -494px;
+    width: 44px;
+    height: 30px;
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 6px;
+}
+
+
+#search-history {
+    background-image: url(https://s.pstatic.net/static/www/img/uit/2020/sp_main_b46ce0.png);
+    background-repeat: no-repeat;
+    background-position: -805px -516px;
+    width: 22px;
+    height: 9px;
+    display: inline-block;
+    vertical-align: top;
+    position: absolute;
+    right: 46px;
+    top: 22px;
+    transform: scale(.5);
+    margin: 0 6px;
+
+}
+
 #search-image {
     background: url(./sp_search.png);
     background-position: -3px -60px;
@@ -122,14 +188,26 @@ header .center-align #header-top .jrnaver {
     top: 0;
 }
 
+nav {
+    height: 51px;
+    border-top: 1px solid #f1f3f6;
+    border-bottom: 1px solid #f1f3f6;
+}
+
+nav div.relative {
+    position: relative;
+}
+
 nav ul {
     margin: 0;
-    padding: 0;
+    padding: 16px 0 0 4px;
     list-style: none;
+    display: inline-block;
 }
 
 nav li {
     display: inline-block;
+    /* float: left; */
 }
 
 nav li span:first-child {
@@ -137,48 +215,68 @@ nav li span:first-child {
     display: inline-block;
     /* 스팬이니까 인라인블록으로 바꿔야 보임 */
     margin-left: 14px;
-
 }
 
 nav li:first-child span:first-child {
     background: url(./sp_nav.png) 4px -284px no-repeat;
     width: 36px;
     margin-left: 0;
-
 }
 
 nav li:nth-child(2) span:first-child {
     background: url(./sp_nav.png) -279px -52px no-repeat;
     width: 36px;
-
 }
 
 nav li:nth-child(3) span:first-child {
     background: url(./sp_nav.png) -100px -182px no-repeat;
     width: 41px;
-
 }
 
 nav li:nth-child(4) span:first-child {
     background: url(./sp_nav.png) -101px -156px no-repeat;
     width: 40px;
-
 }
 
 nav li:nth-child(5) span:first-child {
     background: url(./sp_nav.png) -279px -156px no-repeat;
     width: 36px;
-
 }
 
 nav li:nth-child(6) span:first-child {
     background: url(./sp_nav.png) -70px -284px no-repeat;
     width: 35px;
-
 }
 
 nav li:nth-child(7) span:first-child {
     background: url(./sp_nav.png) 4px -284px no-repeat;
     width: 36px;
+}
 
+.nav-divider {
+    /* float: left; */
+    display: inline-block;
+    margin: 18px 16px 0;
+    width: 1px;
+    height: 14px;
+    background: #ebeef3;
+
+}
+
+#search-ranking {
+    position: absolute;
+    top: 16px;
+    right: 100px;
+}
+
+#rank-number {
+    margin-top: -9px;
+    color: #00ab33;
+    font-size: 16px;
+}
+
+main {
+    background-color: #f2f4f7;
+    display: inline-block;
+    width: 100%;
 }
