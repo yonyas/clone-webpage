@@ -10,6 +10,23 @@ body {
     font-family: "Malgun Gothic", "맑은 고딕", helvetica, "Apple SD Gothic Neo", sans-serif;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+.float-left {
+    float: left;
+}
+
 .blind {
     position: absolute;
     clip: rect(0 0 0 0);
@@ -32,6 +49,7 @@ header {
 #header-top {
     float: right;
     overflow: hidden;
+    dd
     /* clear: both;  여기에 지정하면 안먹고 다른 형제태그에 지정해야함*/
     height: 30px;
 }
@@ -96,6 +114,7 @@ header .center-align #header-top .happybin {
 #header-search {
     clear: both;
     display: inline-block;
+    padding-top: 45px;
 }
 
 #header-search h1 {
@@ -318,77 +337,200 @@ main {
 
 
 #main-centered {
-    padding: 8px 10px 0;
+    padding: 8px 10px;
 
     width: 1100px;
 
 }
 
-#main-ad {
+#main-first-block {
     display: inline-block;
-    width: 720px;
+    width: 100%;
+    vertical-align: top;
+    margin-bottom: 8px;
+}
+
+#main-ad {
+    width: 740px;
     height: 120px;
     background: #555;
-
+    margin-right: 8px;
+    /* margin-bottom: 8px; */
+    float: left;
 }
 
 #main-login {
-    display: inline-block;
-    width: 350px;
+    float: left;
+    width: 332px;
     height: 120px;
     vertical-align: top;
     background: white;
+    /* margin-bottom: 8px; */
+
+
+}
+
+#main-second-block {
+    display: inline-block;
+    width: 100%;
+    vertical-align: top;
+    margin-bottom: 8px;
+}
+
+#main-second-block .float-left:first-child {
+    width: 740px;
+}
+
+#main-second-block .float-left:last-child {
+    width: 332px;
+    vertical-align: top;
+}
+
+
+#ytn-newsstand {
+    margin-right: 8px;
+    vertical-align: top;
 }
 
 #main-ytn {
     display: inline-block;
     width: 740px;
     height: 46px;
+    margin-right: 8px;
+    margin-bottom: 8px;
+    background-color: white;
+    vertical-align: top;
 }
+
+#main-ytn h3,
+#main-ytn ol {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#main-ytn li {
+    list-style-type: none;
+}
+
+
 
 #main-newsstand {
     display: inline-block;
     width: 740px;
-    height: 246px;
+    height: 254px;
+    margin-right: 8px;
+    background-color: white;
+}
+
+#main-newsstand h3 {
+    height: 45px;
+    border-bottom: 1px solid #f2f4f7;
+}
+
+#main-newsstand ul {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+#main-newsstand li {
+    float: left;
+    /* display: inline-block;  <- 얘는 사이공간 문제때문에 안썼음  */
+    width: calc(100% / 6);
+    height: 67px;
+    border-right: 1px solid #f1f3f6;
+    border-bottom: 1px solid #f1f3f6;
+    text-align: center;
+
+}
+
+#main-newsstand li img {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.margin-rightbottom {
+    margin-bottom: 8px;
+
 }
 
 #main-weather {
-    display: inline-block;
-    width: 142px;
+    /* display: inline-block; */
+    float: left;
+    width: 332px;
     height: 150px;
+    margin-bottom: 8px;
+    background-color: white;
+    vertical-align: top;
 }
 
 #main-second-ad {
-    display: inline-block;
-    width: 332px;
-    height: 150px;
-    background: #555;
-}
-
-#main-category {
-    display: inline-block;
-    width: 740px;
-    height: 837px;
-    background: white;
-}
-
-#main-shopping {
-    display: inline-block;
-    width: 332px;
-    height: 837px;
-    background: white;
-}
-
-#main-event {
-    display: inline-block;
+    /* display: inline-block; */
+    float: left;
     width: 332px;
     height: 150px;
     background: #555;
     vertical-align: top;
+
+}
+
+#main-third-block {
+    display: inline-block;
+    width: 100%;
+    vertical-align: top;
+    margin-bottom: 8px;
+}
+
+#main-category {
+    /* display: inline-block; */
+    float: left;
+    width: 740px;
+    height: 837px;
+    background: white;
+    margin-right: 8px;
+    vertical-align: top;
+    /* margin-bottom: 8px; */
+}
+
+#main-shopping {
+    /* display: inline-block; */
+    float: left;
+    vertical-align: top;
+    width: 332px;
+    height: 837px;
+    background: white;
+    /* margin-bottom: 8px; */
+
+}
+
+#main-fourth-block {
+    display: inline-block;
+    width: 100%;
+    vertical-align: top;
+}
+
+#main-event {
+    /* display: inline-block; */
+    float: left;
+
+    width: 740px;
+    height: 150px;
+    background: white;
+    vertical-align: top;
+    margin-right: 8px;
+
 }
 
 #main-third-ad {
-    display: inline-block;
+    /* display: inline-block; */
+    float: left;
+    vertical-align: top;
     width: 332px;
     height: 150px;
     background: #555;
