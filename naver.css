@@ -36,6 +36,13 @@ h6 {
     overflow: hidden;
 }
 
+main {
+    background-color: #f2f4f7;
+    display: inline-block;
+    /* padding: 8px 10px 0; */
+    width: 100%;
+}
+
 .center-align {
     margin: 0 auto;
     width: 1080px;
@@ -328,12 +335,6 @@ nav li:nth-child(13) span:first-child {
     font-size: 16px;
 }
 
-main {
-    background-color: #f2f4f7;
-    display: inline-block;
-    /* padding: 8px 10px 0; */
-    width: 100%;
-}
 
 
 #main-centered {
@@ -400,6 +401,18 @@ main {
     margin-bottom: 8px;
     background-color: white;
     vertical-align: top;
+    /* position: relative; */
+}
+
+#ytn-arrow {
+    display: inline-block;
+    background: url(./sp_logo.png);
+    position: relative;
+    width: 18px;
+    height: 30px;
+    top: 9px;
+    background-repeat: no-repeat;
+    background-position: -636px -586px;
 }
 
 #main-ytn h3,
@@ -410,6 +423,7 @@ main {
     position: relative;
     top: 50%;
     transform: translateY(-50%);
+    vertical-align: top;
 }
 
 #main-ytn li {
@@ -502,10 +516,16 @@ main {
     /* display: inline-block; */
     float: left;
     vertical-align: top;
-    width: 332px;
-    height: 837px;
+    width: 330px;
+    height: 882px;
     background: white;
     /* margin-bottom: 8px; */
+
+}
+
+#main-shopping iframe {
+    width: 100%;
+    height: 100%;
 
 }
 
