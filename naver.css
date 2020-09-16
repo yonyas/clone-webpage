@@ -238,75 +238,75 @@ nav ul {
     /* float: left; */
 }
 
-#nav-menu nav li span:first-child {
+#nav-menu li span:first-child {
     height: 16px;
     display: inline-block;
     /* 스팬이니까 인라인블록으로 바꿔야 보임 */
     margin-left: 14px;
 }
 
-#nav-menu nav li:first-child span:first-child {
+#nav-menu li:first-child span:first-child {
     background: url(./sp_nav.png) 4px -284px no-repeat;
     width: 36px;
     margin-left: 0;
 }
 
-#nav-menu nav li:nth-child(2) span:first-child {
+#nav-menu li:nth-child(2) span:first-child {
     background: url(./sp_nav.png) -279px -52px no-repeat;
     width: 36px;
 }
 
-#nav-menu nav li:nth-child(3) span:first-child {
+#nav-menu li:nth-child(3) span:first-child {
     background: url(./sp_nav.png) -100px -182px no-repeat;
     width: 41px;
 }
 
-#nav-menu nav li:nth-child(4) span:first-child {
+#nav-menu li:nth-child(4) span:first-child {
     background: url(./sp_nav.png) -101px -156px no-repeat;
     width: 40px;
 }
 
-#nav-menu nav li:nth-child(5) span:first-child {
+#nav-menu li:nth-child(5) span:first-child {
     background: url(./sp_nav.png) -279px -156px no-repeat;
     width: 36px;
 }
 
-#nav-menu nav li:nth-child(6) span:first-child {
+#nav-menu li:nth-child(6) span:first-child {
     background: url(./sp_nav.png) -70px -284px no-repeat;
     width: 35px;
 }
 
-#nav-menu nav li:nth-child(7) span:first-child {
+#nav-menu li:nth-child(7) span:first-child {
     background: url(./sp_nav.png) -120px -132px no-repeat;
     width: 36px;
 }
 
-#nav-menu nav li:nth-child(8) span:first-child {
+#nav-menu li:nth-child(8) span:first-child {
     background: url(./sp_nav.png) -279px -208px no-repeat;
     width: 36px;
 }
 
-#nav-menu nav li:nth-child(9) span:first-child {
+#nav-menu li:nth-child(9) span:first-child {
     background: url(./sp_nav.png) -127px -104px no-repeat;
     width: 36px;
 }
 
-#nav-menu nav li:nth-child(10) span:first-child {
+#nav-menu li:nth-child(10) span:first-child {
     background: url(./sp_nav.png)-36px -260px no-repeat;
     width: 36px;
 }
 
-#nav-menu nav li:nth-child(11) span:first-child {
+#nav-menu li:nth-child(11) span:first-child {
     background: url(./sp_nav.png) -150px -156px no-repeat;
     width: 41px;
 }
 
-#nav-menu nav li:nth-child(12) span:first-child {
+#nav-menu li:nth-child(12) span:first-child {
     background: url(./sp_nav.png) -279px -131px no-repeat;
     width: 36px;
 }
 
-#nav-menu nav li:nth-child(13) span:first-child {
+#nav-menu li:nth-child(13) span:first-child {
     background: url(./sp_nav.png) -234px -233px no-repeat;
     width: 36px;
 }
@@ -330,12 +330,12 @@ nav ul {
     height: 20px;
 }
 
-#search-ranking:hover ul {
+#search-ranking:hover #search-popup {
     /* 서치랭킹 손 올렸을때 ul을 바꾼다 */
     display: inline-block;
 }
 
-#search-ranking ul {
+#search-ranking #search-popup {
     display: inline-block;
     list-style: none;
     padding: 17px;
@@ -350,7 +350,37 @@ nav ul {
     display: none;
 }
 
+#search-popup #search-popup-left {
+    font-size: 13px;
+}
 
+#search-popup #search-popup-right {
+    position: absolute;
+    right: 17px;
+    font-size: 13px;
+    color: grey;
+}
+
+#search-popup #search-popup-ranking {
+    display: inline-block;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#search-popup-ranking #oneto-ten,
+#search-popup-ranking #elevento-twelve {
+    float: left;
+}
+
+
+#search-popup #search-popup-ranking div {
+    border: 1px solid grey;
+    width: 130px;
+    text-align: center;
+    height: 25px;
+    margin-top: 9px;
+}
 
 #rank-number {
     margin-top: -9px;
@@ -358,7 +388,15 @@ nav ul {
     font-size: 16px;
 }
 
+#search-popup-ranklist {
+    border-bottom: 1px solid #f1f3f6;
+    padding-bottom: 10px;
+}
 
+#search-popup-footer {
+    color: grey;
+    font-size: 12px;
+}
 
 #main-centered {
     padding: 8px 10px;
@@ -390,9 +428,55 @@ nav ul {
     vertical-align: top;
     background: white;
     /* margin-bottom: 8px; */
-
-
 }
+
+#main-login .login-wrapper {
+    padding: 16px 16px 12px 17px;
+    background-color: #f7f9fa;
+    border: 1px solid #dae1e6;
+    /* line-height: 34px; */
+}
+
+#main-login .login-wrapper>span {
+    font-size: 12px;
+    color: grey;
+}
+
+#main-login .login-wrapper>a {
+    display: block;
+    margin-top: 12px;
+    color: white;
+    background-color: #19ce60;
+    text-decoration: none;
+    text-align: center;
+    height: 37px;
+    width: 280px;
+    border-radius: 2px;
+    font-size: 13px;
+    /* transform: translateY(14px); */
+    line-height: 35px;
+}
+
+
+#main-login .login-wrapper #login-footer a {
+    color: #404040;
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 16px;
+    margin-right: 5px;
+}
+
+#main-login .login-wrapper #login-footer .link-join {
+    float: right;
+    margin-right: 19px;
+    margin-top: 5px;
+}
+
+#main-login .login-wrapper #login-footer a:hover {
+    text-decoration: underline;
+}
+
+
 
 #main-second-block {
     display: inline-block;
