@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
+      rel="stylesheet"
+    />
     <script
       src="https://kit.fontawesome.com/d451332365.js"
       crossorigin="anonymous"
@@ -14,9 +19,9 @@
     <!-- nav -->
     <div class="nav">
       <div class="nav-first">
-        <div class="more">
+        <button class="more">
           <i class="fas fa-bars"></i>
-        </div>
+        </button>
         <div class="logo">
           <i class="fab fa-youtube"></i>
           <span>Youtube</span>
@@ -24,109 +29,139 @@
       </div>
 
       <div class="nav-icons">
-        <div class="search">
+        <button>
           <i class="fas fa-search"></i>
-        </div>
-        <div class="video">
+        </button>
+        <button>
           <i class="fas fa-video"></i>
-        </div>
-        <div class="alarm">
+        </button>
+        <button>
           <i class="fas fa-bell"></i>
-        </div>
-        <div class="account">
+        </button>
+        <button>
           <img src="images/account.png" alt="" />
-        </div>
+        </button>
       </div>
     </div>
-    <!-- player -->
+    <!-- video player -->
     <div class="player">
-      <video controls loop>
-        <source src="images/Waterfall - 37088.mp4" />
-      </video>
-    </div>
-    <div class="info">
-      <div class="hashtag">#크리에이티브코딩 #인터랙티브코딩 #개인작업</div>
-      <div class="playertitle">
-        <div class="title">
-          클론코딩 유튜브 사이트 따라 만들기(HTML+CSS 연습편, 웹 포트폴리오) |
-          프론트엔드 개발자 입문편: HTML, CSS, Javascript
-        </div>
-        <div class="titleicon">
-          <i class="fas fa-sort-up"></i>
-        </div>
-      </div>
-
-      <div class="viewsAndicons">
-        <div class="viewsAndDate">
-          <div class="views">조회수 196,883회</div>
-          <div class="date">2020.5.26.</div>
-        </div>
-        <div class="icons">
-          <div class="infoicon like">
-            <i class="fas fa-thumbs-up"></i>
-            <span>1M</span>
-          </div>
-          <div class="infoicon dislike">
-            <i class="fas fa-thumbs-down"></i>
-            <span>0</span>
-          </div>
-          <div class="infoicon share">
-            <i class="fas fa-share"></i>
-            <span>공유</span>
-          </div>
-          <div class="infoicon save">
-            <i class="fas fa-download"></i>
-            <span>저장</span>
-          </div>
-          <div class="infoicon more">
-            <i class="fas fa-ellipsis-h"></i>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- nextPlayer -->
-    <div class="next">
-      <div class="nextplayer">
-        <div class="screen">
-          <img src="images/account.png" />
-        </div>
-        <div class="nextinfo">
-          <div class="title">프론트엔드 강의- 프론트엔드 개발자 입문편</div>
-          <div class="maker">드림코딩 by 엘리</div>
-          <div class="viewsAndDate">
-            <div class="views">조회수 4.7만회</div>
-            <div class="date">9개월전</div>
-          </div>
-        </div>
-      </div>
-      <div class="nextplayer">
-        <div class="screen">
-          <img src="images/account.png" />
-        </div>
-        <div class="nextinfo">
-          <div class="title">프론트엔드 강의- 프론트엔드 개발자 입문편</div>
-          <div class="maker">드림코딩 by 엘리</div>
-          <div class="viewsAndDate">
-            <div class="views">조회수 4.7만회</div>
-            <div class="date">9개월전</div>
-          </div>
-        </div>
-      </div>
-      <div class="nextplayer">
-        <div class="screen">
-          <img src="images/account.png" />
-        </div>
-        <div class="nextinfo">
-          <div class="title">프론트엔드 강의- 프론트엔드 개발자 입문편</div>
-          <div class="maker">드림코딩 by 엘리</div>
-          <div class="viewsAndDate">
-            <div class="views">조회수 4.7만회</div>
-            <div class="date">9개월전</div>
-          </div>
-        </div>
-      </div>
+      <video controls loop src="images/Waterfall - 37088.mp4"></video>
     </div>
 
-    <script src="prac.js"></script>
+    <div class="infoAndNext">
+      <!-- video info -->
+      <div class="info">
+        <div class="metadata">
+          <ul class="hashtag">
+            <li>#live Coding</li>
+            <li>#Clone</li>
+            <li>#HTML and CSS</li>
+          </ul>
+          <div class="titleAndButton">
+            <span class="title clamp">
+              클론코딩 유튜브 사이트 따라 만들기(HTML+CSS 연습편, 웹 포트폴리오)
+              | 프론트엔드 개발자 입문편: HTML, CSS, Javascript
+            </span>
+            <button class="moreBtn">
+              <i class="fas fa-sort-up"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="viewsAndicons">
+          <div class="viewsAndDate">
+            <span class="views">조회수 196,883회</span>
+            <span class="date">2020.5.26.</span>
+          </div>
+          <ul class="actions">
+            <li>
+              <button>
+                <i class="active fas fa-thumbs-up"></i><span>1M</span>
+              </button>
+            </li>
+            <li>
+              <button><i class="fas fa-thumbs-down"></i><span>0</span></button>
+            </li>
+            <li>
+              <button><i class="fas fa-share"></i><span>공유</span></button>
+            </li>
+            <li>
+              <button><i class="fas fa-download"></i><span>저장</span></button>
+            </li>
+            <li>
+              <button><i class="fas fa-ellipsis-h"></i></button>
+            </li>
+          </ul>
+        </div>
+        <!-- channel description -->
+        <div class="channel">
+          <div class="metadata">
+            <img src="images/account.png" alt="" />
+            <div class="info">
+              <span class="name">Yonyas coding </span>
+              <span class="subscribers">1M 1 month ago</span>
+            </div>
+          </div>
+          <button class="subscribe">subscribe</button>
+        </div>
+      </div>
+      <!-- nextPlayer -->
+      <div class="next">
+        <ul>
+          <li class="item">
+            <div class="img">
+              <img src="images/account.png" alt="" />
+            </div>
+            <div class="info">
+              <span class="title"
+                >프론트엔드 강의, 프론트엔드 개발자가 되고 싶다면? 웹개발
+                입문자편 강의를 시작합니다(HTML, CSS, Javascript +
+                실전프로젝트)</span
+              >
+              <span class="name">드림코딩 by 엘리</span>
+              <span class="views">82K views</span>
+            </div>
+            <button class="moreBtn">
+              <i class="fas fa-ellipsis-v"></i>
+            </button>
+          </li>
+          <li class="item">
+            <div class="img">
+              <img src="images/account.png" alt="" />
+            </div>
+            <div class="info">
+              <span class="title"
+                >프론트엔드 강의, 프론트엔드 개발자가 되고 싶다면? 웹개발
+                입문자편 강의를 시작합니다(HTML, CSS, Javascript +
+                실전프로젝트)</span
+              >
+              <span class="name">드림코딩 by 엘리</span>
+              <span class="views">82K views</span>
+            </div>
+            <button class="moreBtn">
+              <i class="fas fa-ellipsis-v"></i>
+            </button>
+          </li>
+          <li class="item">
+            <div class="img">
+              <img src="images/account.png" alt="" />
+            </div>
+            <div class="info">
+              <span class="title"
+                >프론트엔드 강의, 프론트엔드 개발자가 되고 싶다면? 웹개발
+                입문자편 강의를 시작합니다(HTML, CSS, Javascript +
+                실전프로젝트)</span
+              >
+              <span class="name">드림코딩 by 엘리</span>
+              <span class="views">82K views</span>
+            </div>
+            <button class="moreBtn">
+              <i class="fas fa-ellipsis-v"></i>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <script src="script.js"></script>
   </body>
 </html>
