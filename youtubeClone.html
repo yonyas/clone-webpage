@@ -16,152 +16,113 @@
     ></script>
   </head>
   <body>
-    <!-- nav -->
-    <div class="nav">
-      <div class="nav-first">
-        <button class="more">
-          <i class="fas fa-bars"></i>
-        </button>
+    <!-- header -->
+    <header>
+      <div class="header-first">
+        <i class="fas fa-bars"></i>
         <div class="logo">
           <i class="fab fa-youtube"></i>
-          <span>Youtube</span>
+          <span>YouTube</span>
         </div>
       </div>
-
-      <div class="nav-icons">
-        <button>
-          <i class="fas fa-search"></i>
-        </button>
-        <button>
-          <i class="fas fa-video"></i>
-        </button>
-        <button>
-          <i class="fas fa-bell"></i>
-        </button>
-        <button>
-          <img src="images/account.png" alt="" />
-        </button>
+      <div class="actions">
+        <i class="fas fa-search"></i>
+        <i class="fas fa-video"></i>
+        <i class="fas fa-th"></i>
+        <i class="fas fa-bell"></i>
+        <img src="images/hao2.jpg" alt="" />
       </div>
-    </div>
-    <!-- video player -->
-    <div class="player">
-      <video controls loop src="images/Waterfall - 37088.mp4"></video>
-    </div>
-
-    <div class="infoAndNext">
-      <!-- video info -->
-      <div class="info">
-        <div class="metadata">
-          <ul class="hashtag">
-            <li>#live Coding</li>
-            <li>#Clone</li>
-            <li>#HTML and CSS</li>
-          </ul>
-          <div class="titleAndButton">
-            <span class="title clamp">
-              클론코딩 유튜브 사이트 따라 만들기(HTML+CSS 연습편, 웹 포트폴리오)
-              | 프론트엔드 개발자 입문편: HTML, CSS, Javascript
-            </span>
-            <button class="moreBtn">
-              <i class="fas fa-sort-up"></i>
+    </header>
+    <!-- player -->
+    <section class="player">
+      <video controls src="images/Waterfall - 37088.mp4"></video>
+    </section>
+    <!-- info -->
+    <section class="info">
+      <div class="titleAndActions">
+        <div class="title">
+          식영과 출신인 내가 개발자로 취업하기 위해 준비한 것들!
+        </div>
+        <div class="viewsAndActions">
+          <div class="views">조회수 2만회 • 2020. 1. 1.</div>
+          <div class="actions">
+            <button>
+              <i class="fas fa-thumbs-up"></i>
+              <span>555</span>
+            </button>
+            <button>
+              <i class="fas fa-thumbs-down"></i>
+              <span>0</span>
+            </button>
+            <button>
+              <i class="fas fa-share"></i>
+              <span>공유</span>
+            </button>
+            <button>
+              <i class="fas fa-save"></i>
+              <span>저장</span>
+            </button>
+            <button>
+              <i class="fas fa-ellipsis-h"></i>
             </button>
           </div>
         </div>
+      </div>
+      <!-- my profile -->
+      <div class="myprofile">
+        <div class="profileHeader">
+          <div class="mypicAndName">
+            <div class="mypic">
+              <img src="images/hao2.jpg" alt="" />
+            </div>
+            <div class="name">
+              <span>이지연</span><span>구독자 1.28천명</span>
+            </div>
+          </div>
 
-        <div class="viewsAndicons">
-          <div class="viewsAndDate">
-            <span class="views">조회수 196,883회</span>
-            <span class="date">2020.5.26.</span>
+          <div class="actions">
+            <button>구독중</button>
+            <button>
+              <i class="fas fa-bell"></i>
+            </button>
           </div>
-          <ul class="actions">
-            <li>
-              <button>
-                <i class="active fas fa-thumbs-up"></i><span>1M</span>
-              </button>
-            </li>
-            <li>
-              <button><i class="fas fa-thumbs-down"></i><span>0</span></button>
-            </li>
-            <li>
-              <button><i class="fas fa-share"></i><span>공유</span></button>
-            </li>
-            <li>
-              <button><i class="fas fa-download"></i><span>저장</span></button>
-            </li>
-            <li>
-              <button><i class="fas fa-ellipsis-h"></i></button>
-            </li>
-          </ul>
         </div>
-        <!-- channel description -->
-        <div class="channel">
-          <div class="metadata">
-            <img src="images/account.png" alt="" />
-            <div class="info">
-              <span class="name">Yonyas coding </span>
-              <span class="subscribers">1M 1 month ago</span>
-            </div>
-          </div>
-          <button class="subscribe">subscribe</button>
+        <div class="profile-info">
+          유튜브 클론코딩 연습중입니다. 학원다니고 싶다. 빡빡 진도가 안나가네.
         </div>
       </div>
-      <!-- nextPlayer -->
-      <div class="next">
-        <ul>
-          <li class="item">
-            <div class="img">
-              <img src="images/account.png" alt="" />
-            </div>
-            <div class="info">
-              <span class="title"
-                >프론트엔드 강의, 프론트엔드 개발자가 되고 싶다면? 웹개발
-                입문자편 강의를 시작합니다(HTML, CSS, Javascript +
-                실전프로젝트)</span
-              >
-              <span class="name">드림코딩 by 엘리</span>
-              <span class="views">82K views</span>
-            </div>
-            <button class="moreBtn">
-              <i class="fas fa-ellipsis-v"></i>
-            </button>
-          </li>
-          <li class="item">
-            <div class="img">
-              <img src="images/account.png" alt="" />
-            </div>
-            <div class="info">
-              <span class="title"
-                >프론트엔드 강의, 프론트엔드 개발자가 되고 싶다면? 웹개발
-                입문자편 강의를 시작합니다(HTML, CSS, Javascript +
-                실전프로젝트)</span
-              >
-              <span class="name">드림코딩 by 엘리</span>
-              <span class="views">82K views</span>
-            </div>
-            <button class="moreBtn">
-              <i class="fas fa-ellipsis-v"></i>
-            </button>
-          </li>
-          <li class="item">
-            <div class="img">
-              <img src="images/account.png" alt="" />
-            </div>
-            <div class="info">
-              <span class="title"
-                >프론트엔드 강의, 프론트엔드 개발자가 되고 싶다면? 웹개발
-                입문자편 강의를 시작합니다(HTML, CSS, Javascript +
-                실전프로젝트)</span
-              >
-              <span class="name">드림코딩 by 엘리</span>
-              <span class="views">82K views</span>
-            </div>
-            <button class="moreBtn">
-              <i class="fas fa-ellipsis-v"></i>
-            </button>
-          </li>
-        </ul>
-      </div>
-    </div>
+    </section>
+    <!-- upnext -->
+    <section class="upnext">
+      <div class="nextPlayer">다음 동영상</div>
+      <ul>
+        <li>
+          <img src="images/bs1.jpg" alt="" />
+          <div class="next-info">
+            <span>내가 취업을 할 수 있을까</span>
+            <span class="name">이지연</span>
+            <span class="views">조회수 1회 방금</span>
+          </div>
+        </li>
+        <li>
+          <img src="images/bs2.jpg" alt="" />
+          <div class="next-info">
+            <span>복직하기 싫습니다!</span>
+            <span class="name">이지연</span>
+            <span class="views">조회수 1회 방금</span>
+          </div>
+        </li>
+        <li>
+          <img src="images/beach.jpg" alt="" />
+          <div class="next-info">
+            <span>포기는 배추셀때만</span>
+            <span class="name">이지연</span>
+            <span class="views">조회수 1회 방금</span>
+          </div>
+        </li>
+      </ul>
+    </section>
+
     <script src="script.js"></script>
   </body>
 </html>
