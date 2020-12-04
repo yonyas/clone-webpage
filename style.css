@@ -1,0 +1,129 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.nav {
+  background-color: #202020;
+}
+
+.nav .nav-first {
+  display: flex;
+  margin-left: 10px;
+}
+
+.nav .nav-first .more i {
+  font-size: 10px;
+  color: white;
+}
+.nav .nav-first .logo i {
+  font-size: 10px;
+  color: red;
+}
+
+.nav-first span {
+  color: white;
+  font-size: 10px;
+}
+
+.nav .nav-first .more {
+  margin-right: 3px;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav .nav-icons {
+  display: flex;
+  /* justify-content: center;
+  align-content: center;
+  align-items: center; */
+}
+
+.nav .nav-icons i {
+  font-size: 10px;
+  padding: 5px;
+  color: white;
+  /* align-self: center; */
+}
+
+.nav-icons img {
+  width: 15px;
+  border-radius: 50%;
+  padding-left: 5px;
+}
+
+.player {
+  background-color: black;
+}
+
+video {
+  width: 100%;
+  height: 100%;
+}
+
+@media screen and (max-width: 700px) {
+  /* video {
+    width: 700px;
+  } */
+}
+
+.info .hashtag {
+  color: blue;
+  font-size: 1px;
+}
+
+.info .title {
+  font-size: 10px;
+  font-weight: bold;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+.info .playertitle {
+  display: flex;
+}
+.info .playertitle .titleicon .clicked {
+  transform: rotate(180deg);
+}
+.viewsAndDate {
+  font-size: 1px;
+  color: grey;
+  display: flex;
+}
+.info .date {
+  margin-left: 5px;
+}
+.info .icons {
+  display: flex;
+}
+.info .infoicon {
+  padding: 3px;
+  font-size: 3px;
+}
+.info .viewsAndicons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.next .nextplayer .screen img {
+  width: 50px;
+  height: 30px;
+}
+
+.next .nextplayer {
+  display: flex;
+}
+
+.nextinfo .title,
+.maker {
+  font-size: 1px;
+}
+
+.next {
+  padding-left: 10px;
+}
