@@ -1,0 +1,111 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.skip {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  background: #000;
+  color: white;
+  text-align: center;
+  font-size: 14px;
+  transition: all 0.5s;
+}
+.skip:focus {
+  top: 0;
+}
+.hide {
+  position: absolute;
+  left: 5000px;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+ul {
+  list-style: none;
+}
+/* header */
+header {
+  text-align: center;
+}
+header .logo {
+  top: 0;
+  left: 50px;
+  position: absolute;
+  padding: 14px 0 0;
+}
+header .sp_com {
+  background: url(images/sp_com.png) no-repeat -300px 0;
+  color: transparent;
+  width: 110px;
+  height: 48px;
+  display: block;
+}
+
+header .lnb ul li {
+  display: inline-block;
+}
+header .lnb ul li a {
+  display: block;
+  padding: 0 35px;
+  height: 80px;
+  line-height: 80px;
+  color: #333;
+  font-size: 17px;
+}
+header .lnb ul li a:hover {
+  color: #2d5b79;
+  font-weight: bold;
+}
+header .lnb ul li a span {
+  position: relative;
+}
+header .lnb ul li a:hover span:after {
+  content: "";
+  display: block;
+  background-color: #2d5b79;
+  height: 1px;
+  position: absolute;
+  bottom: -10px;
+  width: 100%;
+}
+header .spot {
+  position: absolute;
+  top: 0;
+  right: 50px;
+}
+header .spot ul li {
+  float: left;
+  position: relative;
+}
+
+header .spot ul li a {
+  height: 81px;
+  line-height: 81px;
+  padding: 0 12px;
+  display: block;
+  font-size: 14px;
+}
+
+header .spot ul li:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 1px;
+  height: 7px;
+  background-color: grey;
+  transform: translateY(-50%);
+}
+header .spot li:first-child:after {
+  display: none;
+}
+header .spot ul li:last-child {
+  padding-right: 0;
+}
