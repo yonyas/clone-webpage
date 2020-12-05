@@ -67,7 +67,7 @@ header .actions img {
 .player video {
   width: 100%;
   height: 100%;
-  max-width: 700px;
+  max-width: 1000px;
 }
 /* info */
 .info {
@@ -138,8 +138,11 @@ header .actions img {
 /* upnext */
 .upnext {
   padding: var(--padding);
+  display: flex;
+  flex-direction: column;
+  /* flex-shrink: 0; */
 }
-.upnext .nextPlayer {
+.upnext > div {
   margin-bottom: 10px;
 }
 .upnext ul li img {
@@ -153,9 +156,43 @@ header .actions img {
 .upnext .next-info {
   display: flex;
   flex-direction: column;
+  flex-shrink: 1;
 }
 .upnext .next-info .name,
 .views {
   color: grey;
   font-size: small;
+}
+.nextPlayer {
+  display: flex;
+  flex-direction: row;
+}
+.nextTitle {
+  max-width: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+  line-height: 1;
+  height: 2em;
+  word-wrap: break-word;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.fullScreen {
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 150px) {
+  .nextTitle {
+    height: 3em;
+    word-wrap: normal;
+    display: inline-block;
+  }
+}
+
+@media screen and (min-width: 820px) {
+  .fullScreen {
+    flex-direction: row;
+  }
 }
