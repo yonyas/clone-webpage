@@ -3,64 +3,68 @@
   padding: 0;
   box-sizing: border-box;
 }
-.skip {
-  position: absolute;
-  top: -100px;
-  left: 0;
-  width: 100%;
-  height: 50px;
-  line-height: 50px;
-  background: #000;
-  color: white;
-  text-align: center;
-  font-size: 14px;
-  transition: all 0.5s;
-}
-.skip:focus {
-  top: 0;
-}
-.hide {
-  position: absolute;
-  left: 5000px;
+ul {
+  list-style-type: none;
 }
 a {
   text-decoration: none;
   color: black;
 }
-ul {
-  list-style: none;
+body {
+  min-width: 1280px;
 }
-/* header */
-header {
+.skip {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 50px;
+  top: -50px;
+  background-color: black;
+  color: white;
   text-align: center;
+  font-size: 15px;
+  line-height: 50px;
+  transition: all 0.5s;
+}
+.skip:focus {
+  top: 0;
+}
+header {
+  height: 81px;
+  text-align: center;
+  position: relative;
 }
 header .logo {
+  padding: 14px 0 0;
+  position: absolute;
   top: 0;
   left: 50px;
-  position: absolute;
-  padding: 14px 0 0;
 }
 header .sp_com {
-  background: url(images/sp_com.png) no-repeat -300px 0;
+  display: block;
   color: transparent;
   width: 110px;
   height: 48px;
-  display: block;
+  background: url("images/sp_com.png") -300px 0;
 }
-
+h2 {
+  position: absolute;
+  left: 5000px;
+}
+header .lnb {
+  height: 81px;
+}
 header .lnb ul li {
   display: inline-block;
 }
 header .lnb ul li a {
-  display: block;
   padding: 0 35px;
-  height: 80px;
-  line-height: 80px;
-  color: #333;
-  font-size: 17px;
+  line-height: 81px;
+  font-size: 16px;
+  display: block;
 }
 header .lnb ul li a:hover {
-  color: #2d5b79;
+  color: #2f5d7b;
   font-weight: bold;
 }
 header .lnb ul li a span {
@@ -69,43 +73,145 @@ header .lnb ul li a span {
 header .lnb ul li a:hover span:after {
   content: "";
   display: block;
-  background-color: #2d5b79;
   height: 1px;
+  background-color: #2f5d7b;
   position: absolute;
-  bottom: -10px;
   width: 100%;
+  bottom: -10px;
 }
 header .spot {
   position: absolute;
   top: 0;
   right: 50px;
+  height: 81px;
 }
 header .spot ul li {
   float: left;
-  position: relative;
 }
-
-header .spot ul li a {
-  height: 81px;
-  line-height: 81px;
-  padding: 0 12px;
-  display: block;
-  font-size: 14px;
-}
-
 header .spot ul li:after {
   content: "";
-  position: absolute;
-  left: 0;
-  top: 50%;
   width: 1px;
   height: 7px;
   background-color: grey;
+  display: block;
+  position: absolute;
+  top: 50%;
   transform: translateY(-50%);
 }
-header .spot li:first-child:after {
+header .spot ul li:first-child::after {
   display: none;
 }
-header .spot ul li:last-child {
+header .spot ul li a {
+  display: block;
+  padding: 0 10px;
+  font-size: 14px;
+  line-height: 81px;
+}
+header .spot ul li:last-child a {
   padding-right: 0;
+}
+
+/* visual section */
+.visual {
+  padding: 0 50px;
+  position: relative;
+}
+
+.visual .prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: url("images/sp_com.png") no-repeat;
+  color: transparent;
+  display: block;
+  width: 30px;
+  height: 48px;
+}
+.visual .prev {
+  background-position: -126px -60px;
+  left: 80px;
+}
+.visual .next {
+  background-position: -156px -60px;
+  right: 80px;
+}
+.visual .con div {
+  height: 640px;
+}
+
+.visual .control {
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  bottom: 55px;
+  left: 0;
+}
+.visual .control > div {
+  position: relative;
+  padding-right: 45px;
+  display: inline-block;
+}
+
+.visual .control ul {
+  font-size: 0;
+  display: inline-block;
+  position: relative;
+  bottom: 7px;
+}
+.visual .control ul li {
+  display: inline-block;
+  margin: 0 3px;
+}
+.visual .control ul li a {
+  display: block;
+  width: 50px;
+  height: 3px;
+  background-color: rgba(255, 255, 255, 0.5);
+  color: transparent;
+}
+.visual .control ul .on {
+  background-color: white;
+}
+/* 재생, 일시정지 */
+
+.visual .control > div > div {
+  right: 0;
+  position: absolute;
+}
+.visual .control > div > div > a {
+  display: inline-block;
+  width: 8px;
+  height: 9px;
+  overflow: hidden;
+  color: transparent;
+  background: url("images/sp_com.png") no-repeat;
+  opacity: 0.5;
+}
+.visual .control a.play {
+  background-position: -108px -72px;
+}
+.visual .control a.on {
+  opacity: 1;
+}
+.visual .control a.pause {
+  background-position: -108px -60px;
+}
+/* text */
+.visual .con .slide {
+  background: url("images/bg_main02.jpg") no-repeat center;
+}
+.visual .slide .text {
+  color: white;
+  font-size: 23px;
+  position: absolute;
+  left: 50%;
+  top: 240px;
+}
+.visual .slide .text span {
+  font-weight: bold;
+  margin-left: 5px;
+  font-size: 28px;
+  position: relative;
+  bottom: 4px;
 }
