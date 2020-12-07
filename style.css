@@ -13,6 +13,10 @@ a {
 body {
   min-width: 1280px;
 }
+.hide {
+  position: absolute;
+  left: -5000px;
+}
 .skip {
   display: block;
   position: absolute;
@@ -145,7 +149,8 @@ header .spot ul li:last-child a {
   text-align: center;
   width: 100%;
   bottom: 55px;
-  left: 0;
+  left: 0; /* left 까먹지말기 */
+  /* position:absolute 일 때 width 사라지므로 유의 */
 }
 .visual .control > div {
   position: relative;
@@ -156,6 +161,7 @@ header .spot ul li:last-child a {
 .visual .control ul {
   font-size: 0;
   display: inline-block;
+  /* 불필요한 여백 생기므로 font-size를 0으로 해줘야 함 */
   position: relative;
   bottom: 7px;
 }
@@ -207,6 +213,7 @@ header .spot ul li:last-child a {
   position: absolute;
   left: 50%;
   top: 240px;
+  height: 300px;
 }
 .visual .slide .text span {
   font-weight: bold;
@@ -214,4 +221,63 @@ header .spot ul li:last-child a {
   font-size: 28px;
   position: relative;
   bottom: 4px;
+}
+/* product */
+.product {
+  height: 181px;
+  text-align: center;
+  padding: 41px 0;
+}
+
+.product ul li {
+  display: inline-block;
+  padding: 0 53px;
+}
+.product li a:hover {
+  color: #2d5b79;
+  font-weight: bold;
+}
+.product li a::before {
+  content: "";
+  display: block;
+  width: 70px;
+  height: 64px;
+  background: url("images/sp_com.png") no-repeat;
+  margin-bottom: 19px;
+}
+.product li:nth-child(1) a::before {
+  background-position: 0 -112px;
+}
+.product li:nth-child(2) a::before {
+  background-position: -72px -112px;
+}
+.product li:nth-child(3) a::before {
+  background-position: -144px -112px;
+}
+.product li:nth-child(4) a::before {
+  background-position: -216px -112px;
+}
+.product li:nth-child(5) a::before {
+  background-position: -288px -112px;
+}
+.product li:nth-child(6) a::before {
+  background-position: -360px -112px;
+}
+.product li:nth-child(1) a:hover::before {
+  background-position: 0 -178px;
+}
+.product li:nth-child(2) a:hover::before {
+  background-position: -72px -178px;
+}
+.product li:nth-child(3) a:hover::before {
+  background-position: -144px -178px;
+}
+.product li:nth-child(4) a:hover::before {
+  background-position: -216px -178px;
+}
+.product li:nth-child(5) a:hover::before {
+  background-position: -288px -178px;
+}
+.product li:nth-child(6) a:hover::before {
+  background-position: -360px -178px;
 }
