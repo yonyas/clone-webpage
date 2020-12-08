@@ -237,6 +237,7 @@ header .spot ul li:last-child a {
   display: block;
   width: 30px;
   height: 48px;
+  z-index: 10;
 }
 .slider .prev {
   background-position: -126px -60px;
@@ -245,6 +246,15 @@ header .spot ul li:last-child a {
 .slider .next {
   background-position: -156px -60px;
   right: 80px;
+}
+
+.magazine.slider .next {
+  left: 50%;
+  margin-left: 640px;
+}
+.magazine.slider .prev {
+  margin-right: 640px;
+  right: 50%;
 }
 .slider .control {
   position: absolute;
@@ -307,12 +317,11 @@ header .spot ul li:last-child a {
 }
 
 /* slide_box  left*/
-.slide_box {
-  height: 430px;
-}
 .slide_box > div {
   width: 1180px;
+  height: 430px;
   display: inline-block;
+  position: relative;
 }
 .slide_box .left {
   height: 430px;
@@ -362,36 +371,44 @@ header .spot ul li:last-child a {
 }
 /* .slide_box right */
 .slide_box .right {
+  position: absolute;
+  right: 0;
   width: 380px;
   height: 430px;
   background-color: white;
-  display: inline-block;
-  padding: 20px 20px;
-  text-align: start;
-  font-weight: bold;
-  font-size: 14px;
+  padding: 20px;
+  float: right;
 }
-.slide_box .right a img {
-  width: 82px;
-  height: 82px;
-  float: left;
-  margin-right: 20px;
+.slide_box .right a {
+  display: block;
+  padding-left: 100px;
+  position: relative;
+  height: 100%;
+}
+.slide_box .right ul {
 }
 .slide_box .right li {
+  margin-bottom: 20px;
+  width: 100%;
+  height: 82px;
+}
+.slide_box .right img {
+  position: absolute;
+  left: 0;
+  width: 82px;
+  height: 82px;
+}
+.slide_box .right p {
+  text-align: start;
+  font-weight: bold;
+  line-height: 24px;
+}
+.slide_box .right span {
   display: block;
-  overflow: hidden;
-  padding: 10px 0;
-}
-.slide_box .right li:first-child {
-  padding-top: 0;
-}
-.slide_box .right li p {
-  padding-top: 14px;
-}
-.slide_box .right li span {
-  display: block;
-  font-size: 16px;
   font-weight: normal;
-  line-height: 100%;
-  margin-top: 13px;
+}
+.slide_box .img_text {
+  display: flex;
+  align-items: center;
+  height: 100%;
 }
