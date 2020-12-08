@@ -51,9 +51,9 @@ header .sp_com {
   height: 48px;
   background: url("images/sp_com.png") -300px 0;
 }
-h2 {
+.hide {
   position: absolute;
-  left: 5000px;
+  left: -5000px;
 }
 header .lnb {
   height: 81px;
@@ -121,88 +121,10 @@ header .spot ul li:last-child a {
   position: relative;
 }
 
-.visual .prev,
-.next {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: url("images/sp_com.png") no-repeat;
-  color: transparent;
-  display: block;
-  width: 30px;
-  height: 48px;
-}
-.visual .prev {
-  background-position: -126px -60px;
-  left: 80px;
-}
-.visual .next {
-  background-position: -156px -60px;
-  right: 80px;
-}
 .visual .con div {
   height: 640px;
 }
 
-.visual .control {
-  position: absolute;
-  text-align: center;
-  width: 100%;
-  bottom: 55px;
-  left: 0; /* left 까먹지말기 */
-  /* position:absolute 일 때 width 사라지므로 유의 */
-}
-.visual .control > div {
-  position: relative;
-  padding-right: 45px;
-  display: inline-block;
-}
-
-.visual .control ul {
-  font-size: 0;
-  display: inline-block;
-  /* 불필요한 여백 생기므로 font-size를 0으로 해줘야 함 */
-  position: relative;
-  bottom: 7px;
-}
-.visual .control ul li {
-  display: inline-block;
-  margin: 0 3px;
-}
-.visual .control ul li a {
-  display: block;
-  width: 50px;
-  height: 3px;
-  background-color: rgba(255, 255, 255, 0.5);
-  color: transparent;
-}
-.visual .control ul .on {
-  background-color: white;
-}
-/* 재생, 일시정지 */
-
-.visual .control > div > div {
-  right: 0;
-  position: absolute;
-}
-.visual .control > div > div > a {
-  display: inline-block;
-  width: 8px;
-  height: 9px;
-  overflow: hidden;
-  color: transparent;
-  background: url("images/sp_com.png") no-repeat;
-  opacity: 0.5;
-}
-.visual .control a.play {
-  background-position: -108px -72px;
-}
-.visual .control a.on {
-  opacity: 1;
-}
-.visual .control a.pause {
-  background-position: -108px -60px;
-}
 /* text */
 .visual .con .slide {
   background: url("images/bg_main02.jpg") no-repeat center;
@@ -280,4 +202,196 @@ header .spot ul li:last-child a {
 }
 .product li:nth-child(6) a:hover::before {
   background-position: -360px -178px;
+}
+
+/* magazine */
+.magazine {
+  height: 690px;
+  background-color: #dfd9d1;
+  text-align: center;
+  position: relative;
+}
+/* padding: 150px 0 90px; */
+.magazine_text {
+  height: 150px;
+  padding: 50px 0 42px;
+}
+.magazine_text h2 {
+  height: 150px;
+  font-size: 29px;
+}
+.magazine_text span {
+  font-size: 16px;
+  font-weight: normal;
+}
+
+/* slider */
+
+.slider .prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: url("images/sp_com.png") no-repeat;
+  color: transparent;
+  display: block;
+  width: 30px;
+  height: 48px;
+}
+.slider .prev {
+  background-position: -126px -60px;
+  left: 80px;
+}
+.slider .next {
+  background-position: -156px -60px;
+  right: 80px;
+}
+.slider .control {
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  bottom: 55px;
+  left: 0; /* left 까먹지말기 */
+  /* position:absolute 일 때 width 사라지므로 유의 */
+}
+.slider .control > div {
+  position: relative;
+  padding-right: 45px;
+  display: inline-block;
+}
+
+.slider .control ul {
+  font-size: 0;
+  display: inline-block;
+  /* 불필요한 여백 생기므로 font-size를 0으로 해줘야 함 */
+  position: relative;
+  bottom: 7px;
+}
+.slider .control ul li {
+  display: inline-block;
+  margin: 0 3px;
+}
+.slider .control ul li a {
+  display: block;
+  width: 50px;
+  height: 3px;
+  background-color: rgba(255, 255, 255, 0.5);
+  color: transparent;
+}
+.slider .control ul .on {
+  background-color: white;
+}
+/* 재생, 일시정지 */
+
+.slider .control > div > div {
+  right: 0;
+  position: absolute;
+}
+.slider .control > div > div > a {
+  display: inline-block;
+  width: 8px;
+  height: 9px;
+  overflow: hidden;
+  color: transparent;
+  background: url("images/sp_com.png") no-repeat;
+  opacity: 0.5;
+}
+.slider .control a.play {
+  background-position: -108px -72px;
+}
+.slider .control a.on {
+  opacity: 1;
+}
+.slider .control a.pause {
+  background-position: -108px -60px;
+}
+
+/* slide_box  left*/
+.slide_box {
+  height: 430px;
+}
+.slide_box > div {
+  width: 1180px;
+  display: inline-block;
+}
+.slide_box .left {
+  height: 430px;
+  width: 800px;
+  position: relative;
+  float: left;
+  overflow: hidden;
+}
+.slide_box .left img {
+  width: 800px;
+}
+.slide_box .left a .text {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 200px;
+  height: 100%;
+  padding: 47px 17px;
+  text-align: start;
+  color: white;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: -1px;
+}
+.slide_box .left a .text h2 {
+  font-size: 16px;
+  margin-bottom: 30px;
+}
+.slide_box .left a .text p:nth-child(2) {
+  line-height: 32px;
+  font-size: 21px;
+  margin-bottom: 13px;
+}
+.slide_box .left a .text p:nth-child(3) {
+  line-height: 24px;
+}
+.slide_box .left a .text p:last-child {
+  position: absolute;
+  bottom: 35px;
+  display: block;
+  width: 160px;
+  height: 55px;
+  border: 1px solid white;
+  text-align: center;
+  line-height: 55px;
+}
+/* .slide_box right */
+.slide_box .right {
+  width: 380px;
+  height: 430px;
+  background-color: white;
+  display: inline-block;
+  padding: 20px 20px;
+  text-align: start;
+  font-weight: bold;
+  font-size: 14px;
+}
+.slide_box .right a img {
+  width: 82px;
+  height: 82px;
+  float: left;
+  margin-right: 20px;
+}
+.slide_box .right li {
+  display: block;
+  overflow: hidden;
+  padding: 10px 0;
+}
+.slide_box .right li:first-child {
+  padding-top: 0;
+}
+.slide_box .right li p {
+  padding-top: 14px;
+}
+.slide_box .right li span {
+  display: block;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 100%;
+  margin-top: 13px;
 }
