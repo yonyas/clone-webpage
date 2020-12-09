@@ -412,3 +412,89 @@ header .spot ul li:last-child a {
   align-items: center;
   height: 100%;
 }
+/* notice */
+.notice {
+  padding: 0 0 100px;
+}
+.notice > div {
+  width: 1180px;
+  margin: 0 auto;
+  padding: 55px 0;
+}
+.notice .top {
+  overflow: hidden;
+}
+.notice .top ul {
+  float: left;
+}
+.notice .top ul li {
+  background: url("images/bg_key_link03.jpg") no-repeat;
+  float: left;
+  padding-right: 20px;
+}
+.notice .top li a {
+  display: block;
+  width: 280px;
+  height: 280px;
+  padding-top: 40px;
+  text-align: center;
+  color: white;
+  font-size: 17px;
+  font-weight: bold;
+}
+.notice .top li a:hover {
+  background-color: rgba(21, 18, 95, 0.5);
+  transition: all 0.5s;
+}
+.notice .top li a span {
+  position: relative;
+  top: 10px;
+  opacity: 0;
+  display: block;
+  font-weight: normal;
+  padding-top: 10px;
+  transition: all 0.5s;
+}
+.notice .top li a:hover span {
+  opacity: 1;
+  top: 0;
+}
+.notice .top > div {
+  float: left;
+  width: 280px;
+  height: 280px;
+  padding: 30px 20px 0;
+  background-color: bisque;
+}
+.notice .top p {
+  text-align: center;
+  line-height: 100%;
+  font-size: 17px;
+  margin-bottom: 10px;
+}
+.notice .top select {
+  width: 100%;
+  height: 45px;
+  border: none;
+  margin-bottom: 10px;
+  text-indent: 10px;
+}
+.notice .top input {
+  width: 100%;
+  height: 45px;
+  border: none;
+  text-indent: 10px;
+  margin-bottom: 30px;
+}
+.notice .top input::-webkit-input-placeholder {
+  font-size: 17px;
+}
+.notice .top div div a {
+  display: block;
+  width: 100%;
+  height: 45px;
+  text-align: center;
+  line-height: 45px;
+  background: blue;
+  color: white;
+}
