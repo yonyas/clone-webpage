@@ -10,7 +10,7 @@ a {
   color: black;
   text-decoration: none;
 }
-
+/* header */
 header {
   height: 130px;
   position: relative;
@@ -19,12 +19,11 @@ header {
 header .nav_spot {
   background-color: #1e272f;
   height: 40px;
-  /* overflow: hidden; */
   border-bottom: 1px solid #37404a;
 }
 header .spot {
   position: absolute;
-  right: 35px;
+  right: 49px;
 }
 header .spot li {
   float: left;
@@ -40,27 +39,111 @@ header .spot li::before {
   position: absolute;
   transform: translateY(-50%);
 }
+header .spot li:first-child::before {
+  display: none;
+}
 header .spot li a {
   display: block;
   color: white;
   padding: 0 15px;
   line-height: 35px;
+  font-size: 13px;
 }
-
+header .spot li:nth-child(3) a::after {
+  content: "";
+  display: inline-block;
+  background: url("images/ico_dotArrB_white.png") no-repeat;
+  width: 13px;
+  height: 7px;
+  margin-left: 5px;
+  position: relative;
+  bottom: 1px;
+}
+header .spot li:nth-child(4) a::after {
+  content: "";
+  display: inline-block;
+  background: url("images/ico_cirArrB_red.png") no-repeat;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-left: 10px;
+}
+/* header gnb */
 header .gnb {
   background-color: #202933;
   height: 90px;
-}
-header .gnb ul {
-  overflow: hidden;
   text-align: center;
-  width: 100%;
+  position: relative;
+}
+header .gnb h2 {
+  position: absolute;
+  padding: 28px 35px;
+}
+header .gnb .logo {
+  color: transparent;
+  background: url("images/1600761559691_0.png") no-repeat;
+  display: block;
+  width: 255px;
+  height: 35p;
+}
+
+header .gnb ul {
+  display: flex;
+  position: absolute;
+  left: 320px;
+  right: 300px;
+  text-align: center;
+  justify-content: space-between;
 }
 header .gnb ul li {
-  float: left;
+  display: inline-block;
 }
 header .gnb ul li a {
   color: white;
   line-height: 90px;
-  padding: 0 27px;
+  display: inline-block;
+  font-size: 21px;
+  font-weight: bolder;
+}
+header .gnb .move {
+  position: absolute;
+  right: 40px;
+  width: 200px;
+  top: 50%;
+  transform: translateY(-34%);
+}
+header .gnb .move select {
+  display: inline-block;
+  position: relative;
+  bottom: 7px;
+  margin-right: 20px;
+  width: 136px;
+  height: 42px;
+  border-radius: 15px;
+  background: url("images/ico_dotArrB_white.png") no-repeat 95% 50%;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+header .gnb .move select option {
+  text-align: center;
+  color: white;
+}
+header .gnb .move .header_search {
+  display: inline-block;
+  background: url("images/ico_topSearch_white.png") no-repeat;
+  width: 29px;
+  height: 27px;
+}
+/* main */
+.main {
+  height: 674px;
+  background: url("images/Main_Section1_Bg2_70.jpg") no-repeat;
+}
+.main_left {
+  width: 790px;
+  height: 400px;
+  background: url("images/1606272754734_2.png");
 }
