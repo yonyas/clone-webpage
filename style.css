@@ -316,7 +316,7 @@ header .spot ul li:last-child a {
   background-position: -108px -60px;
 }
 
-/* slide_box  left*/
+/* slide_box*/
 .slide_box > div {
   width: 1180px;
   height: 430px;
@@ -377,7 +377,7 @@ header .spot ul li:last-child a {
   height: 430px;
   background-color: white;
   padding: 20px;
-  float: right;
+  /* float: right; */
 }
 .slide_box .right a {
   display: block;
@@ -414,7 +414,6 @@ header .spot ul li:last-child a {
 }
 /* notice */
 .notice {
-  padding: 0 0 100px;
 }
 .notice > div {
   width: 1180px;
@@ -426,6 +425,7 @@ header .spot ul li:last-child a {
 }
 .notice .top ul {
   float: left;
+  /* 왜한지 모르겠음  */
 }
 .notice .top ul li {
   background: url("images/bg_key_link03.jpg") no-repeat;
@@ -464,13 +464,13 @@ header .spot ul li:last-child a {
   width: 280px;
   height: 280px;
   padding: 30px 20px 0;
-  background-color: bisque;
+  background-color: #f2f0ed;
 }
 .notice .top p {
   text-align: center;
   line-height: 100%;
   font-size: 17px;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 .notice .top select {
   width: 100%;
@@ -497,4 +497,109 @@ header .spot ul li:last-child a {
   line-height: 45px;
   background: blue;
   color: white;
+}
+/* article */
+article {
+  padding: 20px 0 0;
+  height: 100%;
+}
+article .news_left,
+article .news_right {
+  background-color: #f2f0ed;
+  float: left;
+  width: 580px;
+  position: relative;
+  margin-bottom: 30px;
+
+  height: 260px;
+}
+article .news_left h2,
+article .news_right h2 {
+  font-size: 24px;
+  color: #2d5b79;
+  text-align: center;
+  height: 77px;
+  line-height: 77px;
+  border-bottom: 1px solid white;
+}
+article .news_left {
+  margin-right: 20px;
+}
+article .news_left > a,
+article .news_right > a {
+  position: absolute;
+  /* display: block; */
+  /* inline 요소에 absolute 속성 들어가면 자동으로 block 으로 됨 */
+  top: 24px;
+  right: 23px;
+  width: 30px;
+  height: 30px;
+  background: url("images/sp_com.png") no-repeat -196px -61px;
+  text-indent: -99999px;
+  border-radius: 50%;
+  background-color: white;
+}
+article .news_left ul {
+  overflow: hidden;
+}
+article .news_left ul li {
+  float: left;
+  padding: 35px;
+  width: 50%;
+  height: 100%;
+  position: relative;
+}
+article .news_left ul li:last-child::before {
+  content: "";
+  display: block;
+  background-color: #fff;
+  width: 1px;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: 999;
+  position: absolute;
+}
+article div.news_left ul a span {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+article div.news_right ul a span {
+  display: block;
+  width: 400px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+article div ul a p {
+  font-size: 12px;
+  color: #979797;
+}
+article div.news_left ul a p {
+  padding: 25px 0 20px;
+}
+
+article .news_right {
+  float: right;
+}
+article .news_right li {
+  border-bottom: 1px solid white;
+}
+article .news_right li:last-child {
+  border-bottom: none;
+}
+article .news_right li a {
+  display: block;
+  text-indent: 30px;
+  height: 60px;
+  line-height: 60px;
+}
+article .news_right li span {
+  float: left;
+}
+article .news_right li p {
+  position: absolute;
+  right: 30px;
 }
