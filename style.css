@@ -141,9 +141,69 @@ header .gnb .move .header_search {
 .main {
   height: 674px;
   background: url("images/Main_Section1_Bg2_70.jpg") no-repeat;
+  overflow: hidden;
+  position: relative;
+  padding: 70px 110px 52px;
 }
 .main_left {
-  width: 790px;
-  height: 400px;
-  background: url("images/1606272754734_2.png");
+  float: left;
+  position: absolute;
+  height: 555px;
+  width: 40%;
+}
+
+.main_left_pic img {
+  width: 100%;
+  height: 404px;
+  margin-bottom: -4px;
+}
+.main_left_text {
+  height: 150px;
+  background-color: #00589e;
+  color: rgba(255, 255, 255, 0.5);
+  padding: 40px 40px;
+  position: relative;
+}
+.main_left_text > p > a {
+  display: block;
+  font-size: 24px;
+  color: #fff;
+  font-weight: bold;
+  line-height: 100%;
+  margin-bottom: 16px;
+}
+.main_left_text ul {
+  position: absolute;
+  right: 45px;
+  bottom: 20px;
+}
+.main_left_text ul li {
+  float: left;
+  margin-left: 10px;
+}
+.main_left_text ul li a {
+  text-indent: -99999px;
+  display: block;
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+  border-radius: 50%;
+  opacity: 0.3;
+}
+.main_left_text ul li:last-child a {
+  background: url("images/icon_sVisual_NewsStop.png") no-repeat 8px;
+  width: 25px;
+  height: 25px;
+  border: 1px solid white;
+  position: absolute;
+  bottom: -9px;
+  display: block;
+}
+.main_right {
+  float: right;
+  position: absolute;
+  right: 0;
+  width: 49.5%;
+  border: 1px solid pink;
+  height: 100%;
 }
