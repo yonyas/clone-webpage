@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>한국공항공사 클론</title>
     <link rel="stylesheet" href="style.css" />
+    <script src="https://kit.fontawesome.com/d451332365.js" crossorigin="anonymous"></script>
   </head>
   <body>
     <header>
@@ -54,8 +55,23 @@
       </div>
       <div class="main_right">
         <div class="airinfo">
-          
-          <p>실시간 운항정보<span>운항스케쥴은 항공사 사정으로 변경될 수 있습니다.</span></p>
+          <p>실시간 운항정보<span><i class="fas fa-exclamation-circle"></i>운항스케쥴은 항공사 사정으로 변경될 수 있습니다.</span></p>
+          <div class="OptSelBtn">
+            <span><a href="">출발</a></span>
+            <span><a href="">도착</a></span>
+          </div>
+          <div>
+            <select name="" id="">
+              <option value="">공항 선택</option>
+            </select>
+            <select name="" id="">
+              <option value="">09시</option>
+            </select>
+            <select name="" id="">
+              <option value="">항공사 선택</option>
+            </select>
+            <button>조회</button>
+          </div>
         </div>
         <div class="notice"></div>
         <div class="frequencyMenu"></div>
