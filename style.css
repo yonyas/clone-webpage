@@ -121,11 +121,15 @@ header .gnb .move select {
   margin-right: 20px;
   width: 136px;
   height: 42px;
-  border-radius: 15px;
+  border-radius: 20px;
   background: url("images/ico_dotArrB_white.png") no-repeat 95% 50%;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  color: white;
+  text-indent: 20px;
+  font-size: 15px;
+  border-color: white;
 }
 header .gnb .move select option {
   text-align: center;
@@ -257,4 +261,77 @@ header .gnb .move .header_search {
   font-weight: bold;
   font-size: 17px;
   border-style: none;
+}
+/* notice */
+.notice {
+  background-color: rgba(255, 255, 255, 0.3);
+  margin-top: 15px;
+  color: white;
+  padding: 30px;
+  height: 290px;
+  position: relative;
+}
+.notice h1 {
+  line-height: 100%;
+  margin-bottom: 18px;
+}
+.notice ul {
+  display: block;
+}
+.notice li {
+  position: relative;
+  display: block;
+}
+.notice li a {
+  display: block;
+}
+.notice li a::before {
+  content: "";
+  display: block;
+  background-color: white;
+  width: 3px;
+  height: 3px;
+  position: absolute;
+  top: 35%;
+  transform: translateY(-50%);
+}
+.notice li .notice_title {
+  color: white;
+  padding-bottom: 10px;
+  padding-left: 8px;
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 400px;
+}
+.notice .time {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+/* frequency */
+.frequencyMenu {
+}
+.frequencyMenu h1 {
+  color: white;
+  line-height: 100%;
+  padding: 30px 0 17px;
+}
+.frequencyMenu li {
+  float: left;
+}
+.frequencyMenu li > a {
+  color: white;
+  display: block;
+  border: 1px solid white;
+  border-radius: 20px;
+  padding: 6px 15px;
+  font-size: 15px;
+  margin-right: 3px;
+  width: 95px;
+}
+.frequencyMenu li .extendLink {
+  height: 130px;
+  border: 1px solid pink;
 }
