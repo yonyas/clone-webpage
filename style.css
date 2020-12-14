@@ -151,6 +151,26 @@ header .gnb .move .header_search {
   display: flex;
   justify-content: space-between;
 }
+/* 고객의소리 */
+.main .ico_fix {
+  position: fixed;
+  top: 309px;
+  right: 20px;
+}
+.main .ico_fix img {
+  display: block;
+  text-align: center;
+  background-color: #a70638;
+  border-radius: 50%;
+  position: absolute;
+  top: -60px;
+  right: 10px;
+  padding: 5px;
+}
+.main .ico_fix span {
+  color: white;
+  font-weight: bolder;
+}
 .main_left {
   height: 555px;
   flex: 0.9;
@@ -312,17 +332,31 @@ header .gnb .move .header_search {
 }
 /* frequency */
 .frequencyMenu {
+  position: relative;
+  height: 100%;
 }
 .frequencyMenu h1 {
   color: white;
   line-height: 100%;
   padding: 30px 0 17px;
 }
+.frequencyMenu ul {
+  position: absolute;
+  display: block;
+  width: 100%;
+}
 .frequencyMenu li {
   float: left;
 }
+.frequencyMenu li:first-child > a {
+  background-color: white;
+  color: black;
+  font-weight: bolder;
+  opacity: 1;
+}
 .frequencyMenu li > a {
   color: white;
+  opacity: 0.7;
   display: block;
   border: 1px solid white;
   border-radius: 20px;
@@ -333,5 +367,31 @@ header .gnb .move .header_search {
 }
 .frequencyMenu li .extendLink {
   height: 130px;
-  border: 1px solid pink;
+  position: absolute;
+  margin-top: 10px;
+  left: 10px;
+  width: 100%;
+}
+
+.frequencyMenu li .extendLink a {
+  color: white;
+  font-size: 16px;
+  padding: 0 10px;
+  font-weight: bold;
+  line-height: 100%;
+  position: relative;
+  display: inline-block;
+  height: 30px;
+}
+.frequencyMenu li .extendLink a::before {
+  content: "";
+  display: inline-block;
+  background-color: white;
+  opacity: 0.5;
+  width: 3px;
+  height: 3px;
+  position: absolute;
+  top: 7px;
+  right: -4px;
+  border-radius: 50%;
 }
