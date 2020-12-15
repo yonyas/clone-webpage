@@ -1,0 +1,98 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+ul {
+  list-style: none;
+}
+header {
+  height: 700px;
+  background: url("images/visualimg_1_1920.jpg") no-repeat;
+  padding: 0 30px;
+  position: relative;
+}
+header > div {
+  height: 70px;
+}
+header .left {
+  background-color: #042e6f;
+  width: 30px;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 700px;
+}
+header .left-btm {
+  background-color: #042e6f;
+  height: 30px;
+  position: absolute;
+  bottom: 0;
+  width: 50%;
+}
+header .right {
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-color: #f2f2f2;
+  width: 30px;
+  height: 100%;
+}
+header .right-btm {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 50%;
+  height: 30px;
+  background-color: #f2f2f2;
+}
+header .logo {
+  display: inline-block;
+}
+header .logo a {
+  width: 170px;
+  height: 70px;
+  color: transparent;
+  background: url("images/top_logo.png") no-repeat;
+  display: block;
+}
+header .lnb {
+  text-align: center;
+}
+header .lnb ul {
+  /* display: inline-block; */
+}
+header .lnb li {
+  display: inline-block;
+}
+header .lnb li a {
+  display: block;
+  color: white;
+}
+header .login {
+  position: absolute;
+  right: 30px;
+  top: 0;
+  height: 70px;
+  width: 170px;
+  background-color: #f2f2f2;
+}
+header .login .login-btn {
+  float: left;
+  padding-left: 20px;
+  padding-right: 2px;
+}
+header .login a {
+  display: inline-block;
+  width: 65px;
+  line-height: 70px;
+  font-size: 12px;
+  color: #6f767f;
+}
+header .login i {
+  padding-right: 8px;
+}
