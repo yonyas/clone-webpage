@@ -1,6 +1,7 @@
 * {
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
 }
 a {
   text-decoration: none;
@@ -9,90 +10,175 @@ a {
 ul {
   list-style: none;
 }
+.skip {
+  position: absolute;
+  top: -50px;
+  width: 100%;
+  background-color: black;
+  color: white;
+  text-align: center;
+  height: 50px;
+  line-height: 50px;
+}
+.skip:focus {
+  top: 0;
+}
+.hide {
+  position: absolute;
+  text-indent: -99999px;
+}
 header {
-  height: 700px;
-  background: url("images/visualimg_1_1920.jpg") no-repeat;
-  padding: 0 30px;
+  background: linear-gradient(
+    to right,
+    #042e6f,
+    #042e6f 50%,
+    #f2f2f2 50%,
+    #f2f2f2
+  );
+  padding: 0 30px 30px;
   position: relative;
-}
-header > div {
-  height: 70px;
-}
-header .left {
-  background-color: #042e6f;
-  width: 30px;
-  height: 100%;
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 700px;
-}
-header .left-btm {
-  background-color: #042e6f;
-  height: 30px;
-  position: absolute;
-  bottom: 0;
-  width: 50%;
-}
-header .right {
-  position: absolute;
-  right: 0;
-  top: 0;
-  background-color: #f2f2f2;
-  width: 30px;
-  height: 100%;
-}
-header .right-btm {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 50%;
-  height: 30px;
-  background-color: #f2f2f2;
+  z-index: 35;
 }
 header .logo {
-  display: inline-block;
+  position: absolute;
+  left: 30px;
+  top: 0;
+  z-index: 36;
 }
-header .logo a {
-  width: 170px;
-  height: 70px;
-  color: transparent;
-  background: url("images/top_logo.png") no-repeat;
-  display: block;
+header .visual img {
+  width: 100%;
+  height: 700px;
 }
 header .lnb {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  padding: 0 232px;
+  display: inline-block;
+  z-index: 35;
+}
+header nav {
+  height: 70px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
   text-align: center;
 }
-header .lnb ul {
-  /* display: inline-block; */
-}
-header .lnb li {
+header nav ul {
   display: inline-block;
 }
-header .lnb li a {
+header nav ul:hover ul {
   display: block;
-  color: white;
 }
+
+header nav > ul > li {
+  display: inline-block;
+  position: relative;
+}
+header nav > ul > li > a {
+  color: white;
+  line-height: 69px;
+  display: block;
+  height: 69px;
+  width: 160px;
+  font-size: 18px;
+  position: relative;
+}
+
+header nav > ul > li > a::after {
+  content: "";
+  display: block;
+  background-color: white;
+  height: 2px;
+  width: 0;
+  position: absolute;
+  left: 50%;
+  bottom: -1px;
+  transition: all 0.5s;
+}
+header nav > ul > li:hover > a::after {
+  width: 100%;
+  left: 0;
+}
+header nav > ul ul {
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  padding-top: 22px;
+  display: none;
+}
+header nav > ul ul li {
+  line-height: 39px;
+  display: block;
+}
+header nav > ul ul a {
+  color: white;
+  font-size: 14px;
+  transition: all 0.5s;
+  position: relative;
+}
+header nav > ul ul a:hover {
+  color: #2acef1;
+}
+header nav > ul ul a::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 1px;
+  background-color: #2acef1;
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transition: all 0.5s;
+}
+header nav > ul ul a:hover::after {
+  width: 100%;
+  left: 0;
+}
+header nav + div {
+  height: 0;
+  background-color: #042e6f;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: -1;
+  transition: all 0.3s;
+  padding: 0 30px;
+  background-clip: content-box;
+}
+header nav:hover + div {
+  height: 330px;
+}
+
 header .login {
   position: absolute;
   right: 30px;
   top: 0;
-  height: 70px;
+  display: flex;
   width: 170px;
   background-color: #f2f2f2;
+  z-index: 36;
 }
-header .login .login-btn {
-  float: left;
-  padding-left: 20px;
-  padding-right: 2px;
-}
-header .login a {
-  display: inline-block;
-  width: 65px;
+header .login li {
+  flex: 1;
   line-height: 70px;
-  font-size: 12px;
-  color: #6f767f;
+  padding-left: 10px;
 }
-header .login i {
-  padding-right: 8px;
+
+header .login li:first-child a::before {
+  content: "";
+  display: inline-block;
+  width: 23px;
+  height: 23px;
+  vertical-align: middle;
+  background: url("images/icon.png") no-repeat;
+}
+header .login li:last-child a::before {
+  content: "";
+  display: inline-block;
+  width: 23px;
+  height: 23px;
+  vertical-align: middle;
+  background: url("images/icon.png") no-repeat -23px 0px;
 }
