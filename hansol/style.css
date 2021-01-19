@@ -1,0 +1,745 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+body {
+  min-width: 1280px;
+}
+.hide {
+  position: absolute;
+  left: -5000px;
+}
+.skip {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 50px;
+  top: -50px;
+  background-color: black;
+  color: white;
+  text-align: center;
+  font-size: 15px;
+  line-height: 50px;
+  transition: all 0.5s;
+}
+.skip:focus {
+  top: 0;
+}
+header {
+  height: 81px;
+  text-align: center;
+  position: relative;
+}
+header .logo {
+  padding: 14px 0 0;
+  position: absolute;
+  top: 0;
+  left: 50px;
+}
+header .sp_com {
+  display: block;
+  color: transparent;
+  width: 110px;
+  height: 48px;
+  background: url("images/sp_com.png") -300px 0;
+}
+.hide {
+  position: absolute;
+  left: -5000px;
+}
+header .lnb {
+  height: 81px;
+}
+header .lnb ul li {
+  display: inline-block;
+}
+header .lnb ul li a {
+  padding: 0 35px;
+  line-height: 81px;
+  font-size: 16px;
+  display: block;
+}
+header .lnb ul li a:hover {
+  color: #2f5d7b;
+  font-weight: bold;
+}
+header .lnb ul li a span {
+  position: relative;
+}
+header .lnb ul li a:hover span:after {
+  content: "";
+  display: block;
+  height: 1px;
+  background-color: #2f5d7b;
+  position: absolute;
+  width: 100%;
+  bottom: -10px;
+}
+header .spot {
+  position: absolute;
+  top: 0;
+  right: 50px;
+  height: 81px;
+}
+header .spot ul li {
+  float: left;
+}
+header .spot ul li:after {
+  content: "";
+  width: 1px;
+  height: 7px;
+  background-color: grey;
+  display: block;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+header .spot ul li:first-child::after {
+  display: none;
+}
+header .spot ul li a {
+  display: block;
+  padding: 0 10px;
+  font-size: 14px;
+  line-height: 81px;
+}
+header .spot ul li:last-child a {
+  padding-right: 0;
+}
+
+/* visual section */
+.visual {
+  padding: 0 50px;
+  position: relative;
+}
+
+.visual .con div {
+  height: 640px;
+}
+
+/* text */
+.visual .con .slide {
+  background: url("images/bg_main02.jpg") no-repeat center;
+}
+.visual .slide .text {
+  color: white;
+  font-size: 23px;
+  position: absolute;
+  left: 50%;
+  top: 240px;
+  height: 300px;
+}
+.visual .slide .text span {
+  font-weight: bold;
+  margin-left: 5px;
+  font-size: 28px;
+  position: relative;
+  bottom: 4px;
+}
+/* product */
+.product {
+  height: 181px;
+  text-align: center;
+  padding: 41px 0;
+}
+
+.product ul li {
+  display: inline-block;
+  padding: 0 53px;
+}
+.product li a:hover {
+  color: #2d5b79;
+  font-weight: bold;
+}
+.product li a::before {
+  content: "";
+  display: block;
+  width: 70px;
+  height: 64px;
+  background: url("images/sp_com.png") no-repeat;
+  margin-bottom: 19px;
+}
+.product li:nth-child(1) a::before {
+  background-position: 0 -112px;
+}
+.product li:nth-child(2) a::before {
+  background-position: -72px -112px;
+}
+.product li:nth-child(3) a::before {
+  background-position: -144px -112px;
+}
+.product li:nth-child(4) a::before {
+  background-position: -216px -112px;
+}
+.product li:nth-child(5) a::before {
+  background-position: -288px -112px;
+}
+.product li:nth-child(6) a::before {
+  background-position: -360px -112px;
+}
+.product li:nth-child(1) a:hover::before {
+  background-position: 0 -178px;
+}
+.product li:nth-child(2) a:hover::before {
+  background-position: -72px -178px;
+}
+.product li:nth-child(3) a:hover::before {
+  background-position: -144px -178px;
+}
+.product li:nth-child(4) a:hover::before {
+  background-position: -216px -178px;
+}
+.product li:nth-child(5) a:hover::before {
+  background-position: -288px -178px;
+}
+.product li:nth-child(6) a:hover::before {
+  background-position: -360px -178px;
+}
+
+/* magazine */
+.magazine {
+  height: 690px;
+  background-color: #dfd9d1;
+  text-align: center;
+  position: relative;
+}
+/* padding: 150px 0 90px; */
+.magazine_text {
+  height: 150px;
+  padding: 50px 0 42px;
+}
+.magazine_text h2 {
+  height: 150px;
+  font-size: 29px;
+}
+.magazine_text span {
+  font-size: 16px;
+  font-weight: normal;
+}
+
+/* slider */
+
+.slider .prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: url("images/sp_com.png") no-repeat;
+  color: transparent;
+  display: block;
+  width: 30px;
+  height: 48px;
+  z-index: 10;
+}
+.slider .prev {
+  background-position: -126px -60px;
+  left: 80px;
+}
+.slider .next {
+  background-position: -156px -60px;
+  right: 80px;
+}
+
+.magazine.slider .next {
+  left: 50%;
+  margin-left: 640px;
+}
+.magazine.slider .prev {
+  margin-right: 640px;
+  right: 50%;
+}
+.slider .control {
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  bottom: 55px;
+  left: 0; /* left 까먹지말기 */
+  /* position:absolute 일 때 width 사라지므로 유의 */
+}
+.slider .control > div {
+  position: relative;
+  padding-right: 45px;
+  display: inline-block;
+}
+
+.slider .control ul {
+  font-size: 0;
+  display: inline-block;
+  /* 불필요한 여백 생기므로 font-size를 0으로 해줘야 함 */
+  position: relative;
+  bottom: 7px;
+}
+.slider .control ul li {
+  display: inline-block;
+  margin: 0 3px;
+}
+.slider .control ul li a {
+  display: block;
+  width: 50px;
+  height: 3px;
+  background-color: rgba(255, 255, 255, 0.5);
+  color: transparent;
+}
+.slider .control ul .on {
+  background-color: white;
+}
+/* 재생, 일시정지 */
+
+.slider .control > div > div {
+  right: 0;
+  position: absolute;
+}
+.slider .control > div > div > a {
+  display: inline-block;
+  width: 8px;
+  height: 9px;
+  overflow: hidden;
+  color: transparent;
+  background: url("images/sp_com.png") no-repeat;
+  opacity: 0.5;
+}
+.slider .control a.play {
+  background-position: -108px -72px;
+}
+.slider .control a.on {
+  opacity: 1;
+}
+.slider .control a.pause {
+  background-position: -108px -60px;
+}
+
+/* slide_box*/
+.slide_box > div {
+  width: 1180px;
+  height: 430px;
+  display: inline-block;
+  position: relative;
+}
+.slide_box .left {
+  height: 430px;
+  width: 800px;
+  position: relative;
+  float: left;
+  overflow: hidden;
+}
+.slide_box .left img {
+  width: 800px;
+}
+.slide_box .left a .text {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 200px;
+  height: 100%;
+  padding: 47px 17px;
+  text-align: start;
+  color: white;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: -1px;
+}
+.slide_box .left a .text h2 {
+  font-size: 16px;
+  margin-bottom: 30px;
+}
+.slide_box .left a .text p:nth-child(2) {
+  line-height: 32px;
+  font-size: 21px;
+  margin-bottom: 13px;
+}
+.slide_box .left a .text p:nth-child(3) {
+  line-height: 24px;
+}
+.slide_box .left a .text p:last-child {
+  position: absolute;
+  bottom: 35px;
+  display: block;
+  width: 160px;
+  height: 55px;
+  border: 1px solid white;
+  text-align: center;
+  line-height: 55px;
+}
+/* .slide_box right */
+.slide_box .right {
+  position: absolute;
+  right: 0;
+  width: 380px;
+  height: 430px;
+  background-color: white;
+  padding: 20px;
+  /* float: right; */
+}
+.slide_box .right a {
+  display: block;
+  padding-left: 100px;
+  position: relative;
+  height: 100%;
+}
+.slide_box .right ul {
+}
+.slide_box .right li {
+  margin-bottom: 20px;
+  width: 100%;
+  height: 82px;
+}
+.slide_box .right img {
+  position: absolute;
+  left: 0;
+  width: 82px;
+  height: 82px;
+}
+.slide_box .right p {
+  text-align: start;
+  font-weight: bold;
+  line-height: 24px;
+}
+.slide_box .right span {
+  display: block;
+  font-weight: normal;
+}
+.slide_box .img_text {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+/* notice */
+.notice {
+}
+.notice > div {
+  width: 1180px;
+  margin: 0 auto;
+  padding: 55px 0;
+}
+.notice .top {
+  overflow: hidden;
+}
+.notice .top ul {
+  float: left;
+  /* 왜한지 모르겠음  */
+}
+.notice .top ul li {
+  background: url("images/bg_key_link03.jpg") no-repeat;
+  float: left;
+  padding-right: 20px;
+}
+.notice .top li a {
+  display: block;
+  width: 280px;
+  height: 280px;
+  padding-top: 40px;
+  text-align: center;
+  color: white;
+  font-size: 17px;
+  font-weight: bold;
+}
+.notice .top li a:hover {
+  background-color: rgba(21, 18, 95, 0.5);
+  transition: all 0.5s;
+}
+.notice .top li a span {
+  position: relative;
+  top: 10px;
+  opacity: 0;
+  display: block;
+  font-weight: normal;
+  padding-top: 10px;
+  transition: all 0.5s;
+}
+.notice .top li a:hover span {
+  opacity: 1;
+  top: 0;
+}
+.notice .top > div {
+  float: left;
+  width: 280px;
+  height: 280px;
+  padding: 30px 20px 0;
+  background-color: #f2f0ed;
+}
+.notice .top p {
+  text-align: center;
+  line-height: 100%;
+  font-size: 17px;
+  margin-bottom: 15px;
+}
+.notice .top select {
+  width: 100%;
+  height: 45px;
+  border: none;
+  margin-bottom: 10px;
+  text-indent: 10px;
+}
+.notice .top input {
+  width: 100%;
+  height: 45px;
+  border: none;
+  text-indent: 10px;
+  margin-bottom: 30px;
+}
+.notice .top input::-webkit-input-placeholder {
+  font-size: 17px;
+}
+.notice .top div div a {
+  display: block;
+  width: 100%;
+  height: 45px;
+  text-align: center;
+  line-height: 45px;
+  background: blue;
+  color: white;
+}
+/* article */
+article {
+  padding: 20px 0 0;
+  height: 100%;
+  overflow: hidden;
+}
+article .news_left,
+article .news_right {
+  background-color: #f2f0ed;
+  float: left;
+  width: 580px;
+  position: relative;
+  margin-bottom: 30px;
+
+  height: 260px;
+}
+article .news_left h2,
+article .news_right h2 {
+  font-size: 24px;
+  color: #2d5b79;
+  text-align: center;
+  height: 77px;
+  line-height: 77px;
+  border-bottom: 1px solid white;
+}
+article .news_left {
+  margin-right: 20px;
+}
+article .news_left > a,
+article .news_right > a {
+  position: absolute;
+  /* display: block; */
+  /* inline 요소에 absolute 속성 들어가면 자동으로 block 으로 됨 */
+  top: 24px;
+  right: 23px;
+  width: 30px;
+  height: 30px;
+  background: url("images/sp_com.png") no-repeat -196px -61px;
+  text-indent: -99999px;
+  border-radius: 50%;
+  background-color: white;
+}
+article .news_left ul {
+  overflow: hidden;
+}
+article .news_left ul li {
+  float: left;
+  padding: 35px;
+  width: 50%;
+  height: 100%;
+  position: relative;
+}
+article .news_left ul li:last-child::before {
+  content: "";
+  display: block;
+  background-color: #fff;
+  width: 1px;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: 999;
+  position: absolute;
+}
+article div.news_left ul a span {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+article div.news_right ul a span {
+  display: block;
+  width: 400px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+article div ul a p {
+  font-size: 12px;
+  color: #979797;
+}
+article div.news_left ul a p {
+  padding: 25px 0 20px;
+}
+
+article .news_right {
+  float: right;
+}
+article .news_right li {
+  border-bottom: 1px solid white;
+}
+article .news_right li:last-child {
+  border-bottom: none;
+}
+article .news_right li a {
+  display: block;
+  text-indent: 30px;
+  height: 60px;
+  line-height: 60px;
+}
+article .news_right li span {
+  float: left;
+}
+article .news_right li p {
+  position: absolute;
+  right: 30px;
+}
+/* banner */
+.banner {
+  background: url("images/bg_main_business.jpg") no-repeat center top;
+  height: 500px;
+  padding: 55px 0;
+}
+.banner ul {
+  width: 1180px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+.banner ul li {
+  flex: 1;
+  /* 1/n 으로 화면 나눠가짐 */
+  padding: 0 0 0 20px;
+}
+.banner ul li a {
+  display: block;
+  text-align: center;
+  height: 390px;
+  background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0) 20%,
+      rgba(255, 255, 255, 1)
+    ),
+    url("images/thumb4.png");
+  /* 배경이미지에 투명도 주기 , 순서 중요 이미지가 뒤에. */
+  padding-top: 303px;
+}
+.banner ul li a p {
+  font-size: 23px;
+}
+.banner ul li a span {
+  font-size: 14px;
+  color: #3e413d;
+}
+/* footer */
+footer {
+  height: 280px;
+  color: white;
+}
+.footer_top > div {
+  width: 1180px;
+  margin: 0 auto;
+}
+.footer_top {
+  background-color: #383f43;
+  height: 70px;
+  padding: 13px 0;
+}
+.footer_top ul {
+  overflow: hidden;
+  float: left;
+}
+.footer_top li {
+  float: left;
+}
+.footer_top li::after {
+  content: "";
+  display: inline-block;
+  background-color: grey;
+  width: 1px;
+  height: 8px;
+  z-index: 999;
+  position: relative;
+  right: 10px;
+}
+.footer_top li:last-child::after {
+  display: none;
+}
+.footer_top li a {
+  color: white;
+  line-height: 45px;
+  font-size: 13px;
+  padding-right: 19px;
+}
+/* footer 고객상담 */
+.footer_top > div > div {
+  float: right;
+}
+.footer_top > div > div .text {
+  float: left;
+  height: 45px;
+  width: 242px;
+  line-height: 45px;
+  background-color: #2a3033;
+  padding: 0 10px;
+  text-align: center;
+  font-size: 13px;
+}
+.footer_top > div > div p {
+  float: left;
+  position: relative;
+  left: 8px;
+}
+.footer_top > div > div strong {
+  font-size: 20px;
+  margin-left: 10px;
+}
+.footer_top > div > div select {
+  width: 200px;
+  height: 45px;
+  text-indent: 10px;
+  letter-spacing: -1px;
+  margin-left: 10px;
+}
+/* footer bottom */
+.footer_bottom {
+  background-color: #4c5459;
+  height: 210px;
+  text-align: center;
+}
+.footer_bottom > div {
+  text-align: center;
+}
+.footer_bottom p {
+  background: url("images/sp_com.png") no-repeat -150px 0;
+  width: 130px;
+  height: 50px;
+  color: transparent;
+  display: inline-block;
+  margin: 40px 0;
+}
+.footer_bottom ul {
+  text-align: center;
+  position: relative;
+}
+.footer_bottom ul li {
+  padding: 0 10px;
+  margin-bottom: 10px;
+  display: inline-block;
+  text-align: center;
+  font-size: 14px;
+}
+.footer_bottom address {
+  display: block;
+  font-size: 14px;
+}
